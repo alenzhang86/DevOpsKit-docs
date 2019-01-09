@@ -1,7 +1,7 @@
 ## Scan your Azure Subscription for security vulnerabilities
 ###### :clock10: 30 minutes to complete
 The Subscription Security health check features in AzSK contains a set of scripts that examines a subscription and flags off security issues, misconfigurations or obsolete artifacts/settings which can put your subscription at higher risk.
-This package adds-on to the exiting Azure capabilities like Security Center, IAM, etc. and extends it further to check for the presence for non-tenant accounts, SPN with higher privileges, alerting configuration, etc.
+This package adds-on to the existing Azure capabilities like Security Center, IAM, etc. and extends them further to check for the presence for non-tenant accounts, SPN with higher privileges, alerting configuration, etc.
 
 > Note: Ensure that you already have the latest version of AzSK installed on your machine. If not, please follow instruction [here.](../00a-Setup/Readme.md)
 
@@ -22,7 +22,7 @@ Basically, the AzSK command is scanning the specified target Azure resource (in 
 
 As each rule is processed, the command prints out information about the specific security check being performed. For instance, above, the last rule it has checked is if any deprecated/stale account is present in the subscription.  
 
-Once all rules have been processed execution completes and the output folder is opened for you. 
+Once all rules have been processed,  execution completes and the output folder is opened for you. 
 
 ![00_Security_Status_OP_Folder](../Images/00_Security_Status_OP_Folder.PNG)   
 
@@ -36,8 +36,8 @@ As the rules are checked, in the background AzSK collates the following:
 > **Note:** The overall layout and files in the output folder are also described in the **ReadMe.txt** file present in the root output folder (the one that is opened automatically). 
 
 Typically, you'd want to see the summary of control evaluation first. For that, we need to examine the CSV file. 
-When you double-click the CSV file, it opens in XLS. You can use "Format as Table", "Hide Columns", "Filter", etc., to quickly look at controls that have "Failed" or ones that are marked "Verify". 
-(Controls that are marked as "Verify" typically require that you review the output log for the control evaluation and attest to the correctness. Basically, a status of "Verify" is used for 
+When you double-click the CSV file, it opens in XLS. You can use "Format as Table", "Hide Columns", "Filter", etc., to quickly look at the controls that have "Failed" or the ones that are marked "Verify". 
+(Controls that are marked as "Verify" typically require that you review the output log for the control evaluation and attest to the correctness. Basically, a status of "Verify" is used for the 
 controls where it is not possible to mechanically determine "Pass" or "Fail".)
 
 Basic 'quick fix' type guidance for addressing security issues flagged by the security scan is available
